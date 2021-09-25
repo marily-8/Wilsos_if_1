@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_ejer.css">
+    <title>ejercicio1</title>
+</head>
+
+<body>
+    <h1> 1. Crear un aplicativo web que le permita a un trabajador calcular cuál será su sueldo semanal, se sabe que, si
+        trabaja 40 horas o menos, se le pagará $10000 por hora, pero si trabaja más de 40 horas entonces las horas
+        extras se le pagarán a $15000 por hora.</h1>
+        <section>
+    <form action="#" method="POST">
+        <input type="number" id="horas" placeholder="digite las horas trabajadas" required class="cajas"><br><br><br>
+        <button class="boton1" type="button" onclick="calcular();">CALCULAR</button><br> <br>
+    </form><br>
+    <div id="total"></div>
+    <div id="resultado"></div>
+</section>
+</body>
+
+</html>
+<script class="fondo">
+    function calcular() {
+        var horas = document.getElementById('horas').value;
+
+        if (horas <= 40) {
+            var resultado = parseInt(horas) * 10000;
+            document.getElementById('resultado').innerHTML = "<h1> Resultado es: " + resultado + "</h1>";
+        }
+        if (horas > 40) {
+            var resul = 40 * 10000;
+            var extra = parseInt(horas) - 40;
+            var valor_total = extra * 15000;
+            var total = resul + valor_total
+            document.getElementById('total').innerHTML = "<h1> Resultado es: " + total + "</h1>";
+        }
+    }
+</script>

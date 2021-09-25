@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 4 Notas</title>
+  <link rel="stylesheet" href="css/estilo_ejer.css">
+</head>
+
+<body>
+  <h1>3. Crear una aplicación web que permita calcular la nota definitiva de la materia de programación de JavaScript,
+    utilizando la estructura if-else, se debe solicitar al usuario los datos de Primer parcial, Segundo parcial, Tercer
+    parcial, Exámen final, cada nota tiene un porcentaje:
+
+    - Primer parcial vale 20%
+    - Segundo parcial vale 25%
+    - Tercer parcial vale 30%
+    - Exámen final vale 25%
+    El sistema debe permitir calcular la nota definitiva:
+
+ nota_definitiva=?
+
+El sistema debe validar la nota definitiva:
+
+Si la  nota_definitiva ≥ 3 ⇒ Ganó la materia de programación
+ 2.5 < nota_definitiva  < 3 ⇒ Perdió la materia de programación
+nota_definitiva ≤ 2.5 ⇒ Quedó en transición 
+
+  </h1>
+  <section>
+    <form action="#" method="POST">
+      <input type="number" id="n1" placeholder="Primer parcial" required class="cajas">
+      <br> <br>
+      <input type="number" id="n2" placeholder="Segundo parcial" required class="cajas">
+      <br> <br>
+      <input type="number" id="n3" placeholder="Tercer parcial" required class="cajas">
+      <br> <br>
+      <input type="number" id="n4" placeholder="Exámen final" required class="cajas">
+      <br> <br>
+      <button class="boton1" type="button" onclick="calcular();">CALCULAR</button><br> <br>
+    </form><br>
+    <div id="nota_d"></div>
+    <div id="gano"></div>
+    <div id="perdio"></div>
+    <div id="transicion"></div>
+  </section>
+</body>
+</html>
+<script>
+  function calcular() {
+    var n1 = document.getElementById('n1').value;
+    var n2 = document.getElementById('n2').value;
+    var n3 = document.getElementById('n3').value;
+    var n4 = document.getElementById('n4').value;
+
+    var np1 = parseInt(n1) * 0.20;
+    var np2 = parseInt(n2) * 0.25;
+    var np3 = parseInt(n3) * 0.30;
+    var np4 = parseInt(n4) * 0.25;
+
+    var nota_d = (np1 + np2 + np3 + np4);
+
+    document.getElementById('nota_d').innerHTML = nota_d;
+
+    if (nota_d >= 3) {
+      document.getElementById("gano").innerHTML = "<h1> Gano la materia de programacion y su nota definitiva  es: " + nota_d + "</h1>";
+
+    }
+    if (2.5 < nota_d && nota_d < 3) {
+      document.getElementById("perdio").innerHTML = "<h1> Perdio la materia de programacion y su nota definitiva  es: " + nota_d + "</h1>";
+    }
+    if (nota_d <= 2.4) {
+      document.getElementById("transicion").innerHTML = "<h1> Quedo en transicion y su nota definitiva es: " + nota_d + "</h1>";
+
+    }
+  }
+</script>

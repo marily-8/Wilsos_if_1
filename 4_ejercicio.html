@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 3 numeros</title>
+   <link rel="stylesheet" href="css/estilo_ejer.css">
+</head>
+
+<body>
+   <div id="nav-bar">
+
+
+      </ul>
+   </div>
+   <h1> 4. Crear una aplicación web que solicite al usuario 3 números y permita realizar las siguientes operaciones,
+      utilizando la estructura if-else
+
+      - Calcular el promedio
+      - Hallar el mayor
+      - Hallar el menor
+      - Identificar cuántos pares e impares hay
+   </h1>
+   <section>
+      <form action="#" method="POST">
+         <input type="number" id="n1" placeholder="Ingrese un numero" required class="cajas"> <br> <br>
+         <input type="number" id="n2" placeholder="Ingrese un numero" required class="cajas"> <br> <br>
+         <input type="number" id="n3" placeholder="Ingresa un numero" required class="cajas"> <br> <br>
+         <button class="boton1" type="button" onclick="calcular();">calcular</button><br>
+         <div id="promedio"></div>
+         <div id="v1"></div>
+         <div id="v2"></div>
+         <div id="v3"></div>
+         <div id="m1"></div>
+         <div id="m2"></div>
+         <div id="m3"></div>
+         <div id="p1"></div>
+         <div id="p2"></div>
+         <div id="p3"></div>
+         <div id="im1"></div>
+         <div id="im2"></div>
+         <div id="im3"></div>
+
+      </form><br>
+
+
+   </section>
+
+</body>
+
+</html>
+<script>
+   function calcular() {
+      var n1 = document.getElementById('n1').value;
+      var n2 = document.getElementById('n2').value;
+      var n3 = document.getElementById('n3').value;
+
+
+
+      var suma = parseInt(n1) + parseInt(n2) + parseInt(n3);
+      var promedio = suma / 3;
+
+      document.getElementById('promedio').innerHTML = "<h1> El promedio es: " + promedio + "</h1>";
+
+
+      if (parseInt(n1) > parseInt(n2) && parseInt(n1) > parseInt(n3)) {
+         document.getElementById('v1').innerHTML = "<h1> El Mayor es: " + n1 + "</h1>";
+      }
+      if (parseInt(n2) > parseInt(n1) && parseInt(n2) > parseInt(n3)) {
+         document.getElementById('v2').innerHTML = "<h1> El Mayor es: " + n2 + "</h1>";
+      }
+      if (parseInt(n3) > parseInt(n1) && parseInt(n3) > parseInt(n2)) {
+         document.getElementById('v3').innerHTML = "<h1> El Mayor es: " + n3 + "</h1>";
+      }
+      if (parseInt(n1) < parseInt(n2) && parseInt(n1) < parseInt(n3)) {
+         document.getElementById('m1').innerHTML = "<h1> El Menor es: " + n1 + "</h1>";
+      }
+      if (parseInt(n2) < parseInt(n1) && parseInt(n2) < parseInt(n3)) {
+         document.getElementById('m2').innerHTML = "<h1> El Menor es: " + n2 + "</h1>";
+      }
+      if (parseInt(n3) < parseInt(n1) && parseInt(n3) < parseInt(n2)) {
+         document.getElementById('m3').innerHTML = "<h1> El Menor es: " + n3 + "</h1>";
+      }
+
+      if (parseInt(n1) % 2 == 0) {
+         document.getElementById('p1').innerHTML = "<h1>El par: " + n1 + "</h1>";
+      }
+      if (parseInt(n2) % 2 == 0) {
+         document.getElementById('p2').innerHTML = "<h1>El par: " + n2 + "</h1>";
+      }
+      if (parseInt(n3) % 2 == 0) {
+         document.getElementById('p3').innerHTML = "<h1>El par: " + n3 + "</h1>";
+      }
+      if (parseInt(n1) % 2 == 1) {
+         document.getElementById('im1').innerHTML = "<h1>El impar: " + n1 + "</h1>";
+      }
+      if (parseInt(n2) % 2 == 1) {
+         document.getElementById('im2').innerHTML = "<h1>El impar: " + n2 + "</h1>";
+      }
+      if (parseInt(n3) % 2 == 1) {
+         document.getElementById('im3').innerHTML = "<h1>El impar: " + n3 + "</h1>";
+      }
+   }
+</script>

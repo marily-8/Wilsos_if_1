@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASE POR ALTURA</title>
+</head>
+<body>
+
+    <h1>BASE POR ALTURA</h1>
+    <body>
+        <form action="#" method="POST">
+        <input type="number" id="dato1" placeholder="¡Base!">
+        <input type="number" id="dato2" placeholder="¡Altura!"><br><br>
+        <button type="button" onclick="calcular()">CALCULAR</button>
+        </form>
+    </body>
+    <div id="resultado"></div>
+    <script>
+        function calcular(){
+        var dat1=document.getElementById("dato1").value;
+        var dat2=document.getElementById("dato2").value;
+        var result=(parseInt(dat1)*parseInt(dat2))/2;
+        document.getElementById("resultado").innerHTML="<h1> Resultado es : "+result+"</h1>";
+        }
+    </script>
+
+</body>
+</html>

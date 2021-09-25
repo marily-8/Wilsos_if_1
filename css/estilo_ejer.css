@@ -1,0 +1,30 @@
+body{    
+	background: #D0ECE7;
+}
+section{
+	margin: 0 auto;
+	background: #D2B4DE ;
+	width: 30%;
+	padding: 20px;
+	border-radius: 12px;
+	color: #2C3E50;
+	font-size: 18px;
+	margin-top: 50px;
+}
+.cajas{
+	border-radius: 5px;
+	width: 100%;
+	height: 25px;
+}
+.boton1{
+	background: #B0E7FF;
+	width: 100px;
+	height: 30px;
+	margin-left: 190px;
+	border-radius: 10px;
+	color: #2C3E50;
+}
+h1{
+	text-align: center;
+	font-size: 30px;
+}

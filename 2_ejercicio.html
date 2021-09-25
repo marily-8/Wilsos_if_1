@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA</title>
+    <link rel="stylesheet" href="css/estilo_ejer.css">
+</head>
+
+<body>
+    <h1> 2. Crear un aplicativo web que le permita determinar el aumento de un trabajador, se debe tomar en cuenta que si
+        ganaba más de $1.000.000 tendrá un aumento del 5%, si generaba menos de $800.000 su aumento será de un 10%.</h1>
+    <section>  
+    <form action="#" method="POST">
+        <input type="number" id="sueldo" placeholder="digite su sueldo" required class="cajas">
+        <br>
+        <br>
+        <br>
+        <button class="boton1" type="button" onclick="calcular();">calcular</button><br>
+    </form><br>
+    <div id="total"></div>
+
+    <div id="pago"></div>
+</section>
+
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var sueldo = document.getElementById('sueldo').value;
+
+        if (sueldo > 1000000) {
+            var resultado = parseInt(sueldo) * 0.05;
+            var total = resultado + sueldo
+            document.getElementById('total').innerHTML = "<h1> El total de horas ganas es de: " + total + "</h1>";
+        }
+        if (sueldo < 800000) {
+            var resul = parseInt(sueldo) * 0.10;
+            var pago = (sueldo + resul);
+            document.getElementById('pago').innerHTML = "<h1> El pago de horas ganas es de: " + pago + "</h1>";
+
+        }
+    }
+</script>
